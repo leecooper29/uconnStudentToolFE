@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import '../css/tutoring.css';
+import './tutoring.css';
 import TutoringServiceCard from './ui/TutoringServiceCard';
 
 type ServiceData = {
@@ -11,7 +11,7 @@ type ServiceData = {
 
 const servicesList: ServiceData[] = [
   {
-    title: "Math Tutoring",
+    title: "Calculus Tutoring",
     description: "Get help with calculus, algebra, statistics, and more.",
     buttonText: "Schedule Math Tutoring",
   },
@@ -26,7 +26,7 @@ const servicesList: ServiceData[] = [
     buttonText: "Schedule CS Tutoring", // Shortened for fit
   },
   {
-    title: "Science Tutoring",
+    title: "Sciences Tutoring",
     description: "Chemistry, physics, biology - we've got you covered.",
     buttonText: "Schedule Science Tutoring",
   },
@@ -51,15 +51,11 @@ function Tutoring() {
 
   return (
     <div className="tutoring-container">
-      <h1>Tutoring Center</h1>
-
-      {activeService && (
-        <div className="selected-service-banner">
-          <p>You have selected: <strong>{activeService}</strong></p>
-        </div>
-      )}
-
-      <div className="tutoring-services">
+      <div className='student-progress'>
+        <h1>Student Name</h1>
+        <p>student progession and improvements</p>
+      </div>
+        <div className="tutoring-services">
         {servicesList.map((service) => (
           <TutoringServiceCard
             key={service.title}

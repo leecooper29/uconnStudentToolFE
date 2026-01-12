@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import AuthLayout from "./layouts/AuthLayout";
-import HomePage from "./pages/homePage";
+import HomePage from "./pages/home-page/homePage";
 import NetworkPage from "./pages/network-page/networkPage";
 import StudentPage from "./pages/student-page/studentPage";
 import ProfilePage from "./pages/tutoring/tutoring";
@@ -10,6 +10,10 @@ import Tutoring from "./pages/tutoring/tutoring";
 import { AuthProvider } from "./shared/ui/layout/main-nav/contexts/AuthContext";
 
 function App() {
+
+  // boot.dev for all things back end
+  //  your front end is not bad
+  //  you just need to understand ui/ux fundamentals
 
   return (
     <AuthProvider>

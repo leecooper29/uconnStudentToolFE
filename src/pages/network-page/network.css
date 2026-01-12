@@ -1,13 +1,4 @@
 /* Network Page Styles */
-.banner {
-  position: relative;
-  height: 450px;
-  background-color: rgb(171, 171, 177);
-  display: flex;
-  color: black;
-  padding: 1rem;
-  font-weight: bold;
-}
 
 .main-container {
   display: flex;

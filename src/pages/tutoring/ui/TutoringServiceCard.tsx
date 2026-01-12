@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/tutoring.css';
+import '../tutoring.css';
 
 type TutoringServiceCardProps = {
     title: string;
@@ -13,9 +13,14 @@ const TutoringServiceCard: React.FC<TutoringServiceCardProps> = ({
     title,
     description,
     isActive,
-    onConnect,
+    // onConnect,
     buttonText,
 }) => {
+
+function onConnect(){
+    console.log('taking you to tutoring appointment setting')
+}
+
     return (
         <section className={`service-card ${isActive ? 'active' : ''}`}>
             <h2>{title}</h2>
