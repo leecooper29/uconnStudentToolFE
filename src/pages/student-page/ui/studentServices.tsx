@@ -1,48 +1,10 @@
-import { useState } from "react";
+
 import NetworkBar from "../../network-page/network-bar/NetworkBar";
 import StudentCard from "./studentCard";
 import "./studentServices.css";
 
-type Student = {
-  id: number;
-  name: string;
-  email?: string;
-  phone?: string;
-  username?: string;
-};
-
 
 function StudentServices() {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [student, setStudent] = useState<Student | null>(null);
-
-  async function handleConnect(studentId: number) {
-    setLoading(true);
-    setError(null);
-    setStudent(null);
-
-    try {
-      const res = await fetch(
-        `https://jsonplaceholder.typicode.com/users/${studentId}`
-      );
-      if (!res.ok) throw new Error(`API returned ${res.status}`);
-
-      const data = await res.json();
-      setStudent({
-        id: data.id,
-        name: data.name,
-        email: data.email,
-        phone: data.phone,
-        username: data.username,
-      });
-    } catch (err: any) {
-      setError(err?.message || "Failed to load student");
-    } finally {
-      setLoading(false);
-    }
-  }
-
 
   //student data
   const students = [
@@ -52,6 +14,16 @@ function StudentServices() {
       phone: "203-290-7854",
       email: "leecooper6329@gmail.com",
       majors: ["Computer Science", "Mathematics"],
+      bio: "Passionate about AI and software engineering. Looking for summer internships in tech.",
+      graduationYear: "2025",
+      gpa: "3.8",
+      skills: ["React", "TypeScript", "Python", "Machine Learning"],
+      courses: ["Operating Systems", "Algorithms", "Linear Algebra"],
+      socials: {
+        linkedin: "linkedin.com/in/leecooper",
+        github: "github.com/leecooper",
+      },
+      status: "Seeking Internship",
     },
     {
       id: 2,
@@ -59,6 +31,15 @@ function StudentServices() {
       phone: "203-555-1123",
       email: "alex.martinez@email.com",
       majors: ["Mechanical Engineering"],
+      bio: "Aspiring mechanical engineer with a focus on robotics and automation.",
+      graduationYear: "2026",
+      gpa: "3.6",
+      skills: ["SolidWorks", "MATLAB", "Robotics", "3D Printing"],
+      courses: ["Thermodynamics", "Fluid Mechanics", "Dynamics"],
+      socials: {
+        linkedin: "linkedin.com/in/alexmartinez",
+      },
+      status: "Open to Research",
     },
     {
       id: 3,
@@ -66,6 +47,12 @@ function StudentServices() {
       phone: "203-555-2244",
       email: "jordan.kim@email.com",
       majors: ["Electrical Engineering"],
+      bio: "Interested in embedded systems and circuit design.",
+      graduationYear: "2025",
+      gpa: "3.9",
+      skills: ["C++", "Verilog", "Circuit Design", "Microcontrollers"],
+      courses: ["Circuit Analysis", "Digital Logic", "Signals and Systems"],
+      status: "Student",
     },
     {
       id: 4,
@@ -73,6 +60,12 @@ function StudentServices() {
       phone: "203-555-3377",
       email: "priya.patel@email.com",
       majors: ["Biomedical Engineering"],
+      bio: "Focusing on medical devices and tissue engineering.",
+      graduationYear: "2027",
+      gpa: "3.7",
+      skills: ["Biomaterials", "LabView", "Python", "Data Analysis"],
+      courses: ["Organic Chemistry", "Biomechanics", "Physiology"],
+      status: "Student",
     },
     {
       id: 5,
@@ -80,6 +73,12 @@ function StudentServices() {
       phone: "203-555-4488",
       email: "michael.johnson@email.com",
       majors: ["Physics"],
+      bio: "Physics major with a minor in Astronomy. Loves solving complex problems.",
+      graduationYear: "2026",
+      gpa: "3.5",
+      skills: ["Data Analysis", "Python", "LaTeX", "Problem Solving"],
+      courses: ["Quantum Mechanics", "Electromagnetism", "Astrophysics"],
+      status: "Seeking Research",
     },
     {
       id: 6,
@@ -87,6 +86,15 @@ function StudentServices() {
       phone: "203-555-5599",
       email: "sofia.ramirez@email.com",
       majors: ["Data Science"],
+      bio: "Turning data into actionable insights. Love working with big data sets.",
+      graduationYear: "2025",
+      gpa: "3.9",
+      skills: ["SQL", "R", "Python", "Machine Learning", "Tableau"],
+      courses: ["Big Data Computing", "Statistical Methods", "Data Mining"],
+      socials: {
+        github: "github.com/sofiaramirez",
+      },
+      status: "Seeking Full-time",
     },
   ];
 
@@ -98,21 +106,9 @@ function StudentServices() {
           {students.map((s) => (
             <StudentCard
               key={s.id}
-              name={s.name}
-              phone={s.phone}
-              email={s.email}
-              majors={s.majors}
-              onConnect={() => handleConnect(s.id)} studentId={""} />
+              student={s} />
           ))}
         </div>
-        {/* API feedback */}
-        {loading && <p>Loading student...</p>}
-        {error && <p className="error">{error}</p>}
-        {student && (
-          <p className="success">
-            Connected with <strong>{student.name}</strong>
-          </p>
-        )}
       </div>
     </section>
   );

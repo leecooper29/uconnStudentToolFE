@@ -8,6 +8,7 @@ function Profile() {
    expectedGraduation: "May 2027",
    university: "University of Connecticut",
    location: "Stamford Campus",
+   email: "cooperlee32@gmail.com"
  };
 
     return (
@@ -30,12 +31,12 @@ function Profile() {
               <li>Expected Graduation: {studentInfo.expectedGraduation}</li>
               <li>University: {studentInfo.university}</li>
               <li>Location: {studentInfo.location}</li>
+              <li>Outlook: {studentInfo.email}</li>
             </ul>
           </div>
           <div className="messages-container">
             <h2>Messages</h2>
-            
-          </div>
+            </div>
         </div>
         <div>
         </div>

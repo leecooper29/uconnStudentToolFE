@@ -13,7 +13,7 @@ function Header() {
     <>
       <header>
         <div className="header-left" onClick={() => navigate("/")}>
-          <p className="title">Uconn Network |</p>
+          <p className="title">Uconn Network | Stamford</p>
         </div>
         <div className="">
           <nav className="header-nav">

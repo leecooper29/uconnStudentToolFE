@@ -47,7 +47,7 @@ function MainNav() {
   return (
     <nav className="main-nav">
       <ul className="nav-items">
-        <li><Link to="/home-page">Home ^</Link></li>
+        <li>  <Link to="/">Home ^</Link></li>
         <li><Link to="/network">My Network ^</Link></li>
 
         {/* Campus dropdown */}

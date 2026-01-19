@@ -54,6 +54,7 @@ function Tutoring() {
       <div className='student-progress'>
         <h1>Student Name</h1>
         <p>student progession and improvements</p>
+        <div className="schedule"></div>
       </div>
         <div className="tutoring-services">
         {servicesList.map((service) => (

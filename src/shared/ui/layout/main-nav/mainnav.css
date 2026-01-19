@@ -9,7 +9,11 @@
   list-style: none;
   align-items: center;
   padding: 0;
-  padding-left: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.nav-items li:hover {
+  border-bottom: 2px solid rgb(13, 13, 80);
 }
 
 .dropdown {

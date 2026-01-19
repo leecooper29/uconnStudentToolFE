@@ -20,18 +20,19 @@ function HomePage() {
             <p>(recent events below) placeholder image</p>
           </div>
         </div>
+        {/* event grid component */}
         <div className="events-item">
           <div className="event-item">
-          <p>Placeholder for recent events</p>
+          <p>Placeholder for recent events |</p>
           </div>
           <div className="event-item">
-          <p>Placeholder for recent events</p>
+          <p>Placeholder for recent events |</p>
           </div>
           <div className="event-item">
-          <p>Placeholder for recent events</p>
+          <p>Placeholder for recent events |</p>
           </div>
           <div className="event-item">
-          <p>Placeholder for recent events</p>
+          <p>Placeholder for recent events |</p>
           </div>
         </div>
         {/* <h2>Contact Us</h2>

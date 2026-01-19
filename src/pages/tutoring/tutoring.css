@@ -7,6 +7,11 @@
   padding: 2rem 1rem;
 }
 
+.student-progress {
+  background-color: lightgray;
+  padding: 1rem;
+}
+
 .tutoring-container h1 {
   margin: 0.5rem 0 2rem 0;
   text-align: center;
@@ -16,7 +21,7 @@
 
 .tutoring-services {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 2fr);
   gap: 1.5rem;
   margin: 0 auto;
   width: 100%;

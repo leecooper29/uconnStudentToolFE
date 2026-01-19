@@ -1,29 +1,35 @@
 import { useNavigate } from "react-router-dom";
 
-type StudentCardProps = {
+export type Student = {
+  id: number;
   name: string;
   phone?: string;
   email?: string;
   majors?: string[];
-  studentId: string; // Add studentId to props
-  onConnect: (studentId: string) => void; // Update to accept studentId
+  bio?: string;
+  graduationYear?: string;
+  gpa?: string;
+  skills?: string[];
+  courses?: string[];
+  socials?: {
+    linkedin?: string;
+    github?: string;
+    website?: string;
+  };
+  status?: string;
 };
 
-function StudentCard({
-  name,
-  phone,
-  email,
-  majors,
-  studentId, // Destructure studentId
-  onConnect,
-}: StudentCardProps) {
-  
+type StudentCardProps = {
+  student: Student;
+};
+
+function StudentCard({ student }: StudentCardProps) {
   const navigate = useNavigate();
-  
+
   const handleConnect = () => {
-    console.log('connecting to user profile (details)..');
-    onConnect(studentId); // Call the prop function with studentId
-    navigate('../studentPage.tsx');
+    navigate(`/student/${student.id}`, {
+      state: student,
+    });
   };
 
   return (
@@ -31,11 +37,11 @@ function StudentCard({
       <div className="space-between">
         <img alt="student image" className="student-image" />
         <div className="student-contents">
-          <h2>Name: {name}</h2>
-          {phone && <span>phone: {phone}</span>}
-          {email && <span>email: {email}</span>}
-          {majors && <span>majors: {majors.join(", ")}</span>}
-          <p>brief student description</p>
+          <h2>Name: {student.name}</h2>
+          {student.phone && <span>phone: {student.phone}</span>}
+          {student.email && <span>email: {student.email}</span>}
+          {student.majors && <span>majors: {student.majors.join(", ")}</span>}
+          <p>{student.status || "Student"}</p>
         </div>
         <div>
           {/* links to the student profile of the selected person

@@ -25,10 +25,9 @@ function App() {
             <Route path="/home-page" element={<HomePage />} />
             <Route path="/network" element={<NetworkPage />} />
             <Route path="/tutoring" element={<Tutoring />} />
-            <Route path="/student/id" element={<StudentPage />} />
+            <Route path="/student/:id" element={<StudentPage />} />
             <Route path="/profile" element={<ProfilePage />} />
           </Route>
-
           {/* Auth pages */}
           <Route element={<AuthLayout />}>
             <Route path="/signin" element={<SignIn />} />

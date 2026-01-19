@@ -27,6 +27,7 @@ function onConnect(){
             <p>{description}</p>
             <button onClick={onConnect}>{buttonText}</button>
         </section>
+        
     );
 };
 
