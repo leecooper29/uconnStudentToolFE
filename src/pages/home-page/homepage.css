@@ -1,0 +1,49 @@
+h1 {
+  font-size: 30px;
+  font-family: sans-serif;
+  padding: 0;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  gap: 20px;
+  height: 40vh;
+}
+
+/* 
+.banner {
+  background-color:rgb(12, 12, 74);
+} */
+
+.banner {
+  position: relative;
+  height: 450px;
+  background-color: rgb(171, 171, 177);
+  display: flex;
+  color: black;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.item {
+  background-color: lightgray;
+  padding: 1rem;
+}
+
+.item-2 {
+  background-color: lightgray;
+  padding: 1rem;
+}
+
+.events-item {
+
+  background-color: lightgrey;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+/* .event-item:hover {
+  border-bottom: 1px solid black;
+} */
