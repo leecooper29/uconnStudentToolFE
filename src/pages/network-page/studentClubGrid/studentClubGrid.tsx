@@ -11,7 +11,7 @@ type Club = {
 interface StudentClubGridProps {
   clubs: Club[];
 }
-
+//some comments
 function StudentClubGrid({ clubs }: StudentClubGridProps) {
   const navigate = useNavigate();
 
