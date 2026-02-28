@@ -26,7 +26,13 @@
   margin: 0.5rem 0 1rem 0;
 }
 
-@media (max-width: 800px){
-  .main-grid{ grid-template-columns: 1fr; margin: 1rem; }
-  .s-container{ padding: 0 0.5rem; }
+@media (max-width: 800px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+    margin: 1rem;
+  }
+
+  .s-container {
+    padding: 0 0.5rem;
+  }
 }

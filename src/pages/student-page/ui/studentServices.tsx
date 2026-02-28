@@ -1,5 +1,3 @@
-
-
 import NetworkBar from "../../network-page/network-bar/NetworkBar";
 import StudentCard, { Student } from "./studentCard";
 import "./studentServices.css";

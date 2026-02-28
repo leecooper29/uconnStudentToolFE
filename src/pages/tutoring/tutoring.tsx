@@ -26,16 +26,29 @@ const servicesList: ServiceData[] = [
     buttonText: "Schedule CS Tutoring", // Shortened for fit
   },
   {
-    title: "Sciences Tutoring",
-    description: "Chemistry, physics, biology - we've got you covered.",
-    buttonText: "Schedule Science Tutoring",
+    title: "Physics Tutoring",
+    description: "Get help with physics concepts, problem-solving, and exam prep.",
+    buttonText: "Schedule Physics Tutoring",
   },
+  {
+    title: "Chemistry Tutoring",
+    description: "Support for chemistry concepts, lab work, and exam prep.",
+    buttonText: "Schedule Chemistry Tutoring",
+  },
+  {
+    title: "Language Tutoring",
+    description: "Practice and improve your language skills.",
+    buttonText: "Schedule Language Tutoring",
+  }
+  
 ];
 
 function Tutoring() {
   const location = useLocation();
   const selectedService = (location.state as { service?: string } | null)?.service;
   const [activeService, setActiveService] = useState<string | null>(selectedService || null);
+
+
 
   useEffect(() => {
     if (selectedService) {
@@ -49,16 +62,27 @@ function Tutoring() {
     console.log(`Scheduling ${serviceTitle}...`);
   };
 
+  const user = "Lee Cooper"
+
   return (
     <div className="tutoring-container">
-      <div className='student-progress'>
-        <h1>Welcome the Case!</h1>
-        <h1>Student Name</h1>
-        <p>student progession and improvements</p>
+            {/* Tutoring services grid */}
+      <div className='student-info'>
+        <div className="">
+          <h1>Welcome to Case!</h1>
+          <p>Your one-stop solution for all tutoring needs.</p>
+          <p>Register here! (kiosk in person) list of items</p>
+       </div>
+       {/* <div className="hide-student">
+        <h2>{user}</h2>
+        <p>Progress: 3/5 services completed</p>
+        <div className="student-id">Student ID: 12345</div>
         <div className="schedule"></div>
-      </div>
-      <div className="tutoring-services">
-        {servicesList.map((service) => (
+      </div> */}
+    </div>
+    <div className="tutoring-services">
+      {servicesList
+      .map((service) => (
           <TutoringServiceCard
             key={service.title}
             title={service.title}
@@ -69,6 +93,7 @@ function Tutoring() {
           />
         ))}
       </div>
+      
     </div>
   );
 }

@@ -23,9 +23,11 @@ function RecentEvents({ events }: RecentEventsProps) {
             <div className="events-grid">
                 {events.map((event, index) => (
                     <div className="event-card" key={index}>
-                        <div className="event-date">{event.date}</div>
-                        <h3>{event.title}</h3>
-                        <p>{event.description}</p>
+                        <div className="event-header">
+                            <div className="event-date">{event.date}</div>
+                            <h3>{event.title}</h3>
+                        </div>
+                        <div className="desc">{event.description}</div>
                     </div>
                 ))}
             </div>

@@ -25,7 +25,7 @@ function onConnect(){
         <section className={`service-card ${isActive ? 'active' : ''}`}>
             <h2>{title}</h2>
             <p>{description}</p>
-            <button onClick={onConnect}>{buttonText}</button>
+            <button onClick={onConnect} className="tutoring-service-button">{buttonText}</button>
         </section>
         
     );

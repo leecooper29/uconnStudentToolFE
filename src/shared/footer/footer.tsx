@@ -17,10 +17,8 @@ function Footer() {
   return (
     <footer>
       <div className="sub-footer-container">
-        {/* <img alt="college logo"></img> */}
-        <div className="s-container">
+        <div className="sm-container">
           <div className="s-list">
-            {/* <FaInstagram /> */}
             <div className="s-icon">
               <FaFacebook />
             </div>
@@ -35,7 +33,7 @@ function Footer() {
             </div>
           </div>
           {/* <p className="icons">social media icons</p> */}
-          <div className="f-container">
+          <div className="footer-container">
             <div className="footer-container">
               <div className="footer-links">
                 {footerLinks.map((link) => (
@@ -47,19 +45,20 @@ function Footer() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="f-grid">
-        <div>
-          <h2>Uconn</h2>
+        <div className="footer-separator" />
+        <div className="footer-address">
+          <div>
+            <h4>UCONN</h4>
+          </div>
+          <div>
+            <p>stamford campus</p>
+            <p> 1 university place</p>
+            <p> stamford, ct 06901</p>
+            <p> 203-251-8490</p>
+            <p> <a href="https://stamford.uconn.edu/academics/undergraduate/">stamford.uconn.edu</a></p>
+          </div>
         </div>
-        <div>
-          <p>stamford campus</p>
-          <p> 1 university place</p>
-          <p> stamford, ct 06901</p>
-          <p> 203-251-8490</p>
-          <p> <a href="https://stamford.uconn.edu/academics/undergraduate/">stamford.uconn.edu</a></p>
         </div>
-      </div>
     </footer>
   );
 }

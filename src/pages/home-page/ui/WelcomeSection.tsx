@@ -11,7 +11,7 @@ function WelcomeSection() {
                         The UConn Student Tool is designed to help students navigate their academic journey at the University of Connecticut.
                         Our platform provides resources, tools, and information to enhance your student experience.
                     </p>
-                    <button>Get Started</button>
+                    <button className="start">Get Started</button>
                 </div>
                 <div className="item-2">
                     <img src="" alt="" />

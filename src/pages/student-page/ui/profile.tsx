@@ -1,4 +1,3 @@
-
 import "./profile.css";
 
 interface ProfileProps {
@@ -24,9 +23,11 @@ function Profile({ student }: ProfileProps) {
             <p className="student-description">
               {student.description}
             </p>
-            <p>{student.location}</p>
+            <div className="student-location">
+              <p>{student.location}</p>
+            </div>
           </div>
-          <div>
+          <div className="profile-details">
             <ul className="student-details">
               <h2>Student Info:</h2>
               <li>Major: {student.major}</li>
@@ -37,7 +38,8 @@ function Profile({ student }: ProfileProps) {
             </ul>
           </div>
           <div className="messages-container">
-            <h2>Messages</h2>
+            <h5>My Messages:</h5>
+            <p>No messages to display.</p>
           </div>
         </div>
         <div>

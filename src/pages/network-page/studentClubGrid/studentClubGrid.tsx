@@ -28,8 +28,9 @@ function StudentClubGrid({ clubs }: StudentClubGridProps) {
       <div className="grid">
         {clubs.map((club) => (
           <div className="grid-item" key={club.slug}>
+            <img alt="club image"></img>
             <div className="grid-item-top">
-              <h4>{club.name}</h4>
+              <h2>{club.name}</h2>
               <p className="club-desc">{club.description}</p>
               <button
                 type="button"

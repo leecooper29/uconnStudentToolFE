@@ -2,6 +2,7 @@ import "./header.css";
 import React, { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { AuthContext } from "./ui/layout/main-nav/contexts/AuthContext";
+import { FaSearch } from "react-icons/fa";
 
 function Header() {
   const navigate = useNavigate();
@@ -18,7 +19,11 @@ function Header() {
         <div className="">
           <nav className="header-nav">
             <ul className="user">
-              <li>search (a-z)</li>
+              <li>
+                {/* <FaSearch /> */}
+                <span>[search]</span>
+                <span>(a-z)</span>
+              </li>
               {/* search input here */}
               {auth?.user ? (
                 <li>

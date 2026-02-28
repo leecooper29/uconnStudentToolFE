@@ -6,6 +6,7 @@ import Banner from "./ui/Banner";
 import WelcomeSection from "./ui/WelcomeSection";
 import RecentEvents from "./ui/RecentEvents";
 import { recentEvents } from "./ui/data";
+// import MainNav from "../../components/main-nav/mainNav";
 
 function HomePage() {
   return (

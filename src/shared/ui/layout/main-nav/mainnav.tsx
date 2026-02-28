@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./mainnav.css";
 import { useEffect, useRef, useState, useContext } from "react";
 import { AuthContext } from "./contexts/AuthContext";
+import { TiArrowSortedDown } from "react-icons/ti";
 
 function MainNav() {
   const [isCampusOpen, setIsCampusOpen] = useState(false);
@@ -47,13 +48,17 @@ function MainNav() {
   return (
     <nav className="main-nav">
       <ul className="nav-items">
-        <li>  <Link to="/">Home ^</Link></li>
-        <li><Link to="/network">My Network ^</Link></li>
+        <li><Link to="/">Home 
+        {/* <TiArrowSortedDown  className="search"/> */}
+        </Link></li>
+        <li><Link to="/network">My Network 
+        <TiArrowSortedDown />
+        </Link></li>
 
         {/* Campus dropdown */}
         <li className="dropdown" ref={campusDropDownRef}>
           <span onClick={toggleCampusDropdown} className="dropdown-label">
-            {selectedCampus} ^
+            {selectedCampus} <TiArrowSortedDown />
           </span>
           {isCampusOpen && (
             <ul className="dropdown-menu">
@@ -68,7 +73,8 @@ function MainNav() {
         {/* Tutoring dropdown */}
         <li className="dropdown" ref={tutoringDropDownRef}>
           <span onClick={toggleTutoringDropdown} className="dropdown-label">
-            Tutoring Services ^
+            Tutoring Services 
+            <TiArrowSortedDown />
           </span>
           {isTutoringOpen && (
             <ul className="dropdown-menu">

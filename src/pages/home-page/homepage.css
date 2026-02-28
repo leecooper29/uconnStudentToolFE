@@ -7,24 +7,26 @@ h1 {
 .main-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 1rem;
+  margin-top: 1rem;
   gap: 20px;
   height: 40vh;
 }
 
-/* 
-.banner {
-  background-color:rgb(12, 12, 74);
-} */
+.start {
+  padding: 0.5rem;  
+  background-color: rgb(4, 4, 48);
+  color: white;
+}
 
+/* image or linear gradient*/
 .banner {
   position: relative;
   height: 450px;
-  background-color: rgb(171, 171, 177);
   display: flex;
   color: black;
   padding: 1rem;
   font-weight: bold;
+  background-color: grey;
 }
 
 .item {
@@ -47,3 +49,13 @@ h1 {
 /* .event-item:hover {
   border-bottom: 1px solid black;
 } */
+
+@media screen and (max-width: 700px) {
+}
+
+@media screen and (min-width: 500px) {
+}
+
+@media screen and (max-width: 375px) {
+  
+}

@@ -2,13 +2,13 @@ import "./network.css";
 import Profile from "../student-page/ui/profile";
 import StudentServices from "../student-page/ui/studentServices";
 import StudentClubGrid from "./studentClubGrid/studentClubGrid";
-import CareerCenter from "./careerCenter/CareerCenter";
+// import CareerCenter from "./careerCenter/CareerCenter";
 import { currentStudent, students, clubs, careerOpportunities } from "../data/mockData";
+// import CareerCenter from "./careerCenter/CareerCenter";
 
 function Network() {
   return (
     <section className="page-header">
-      {/* <div className="banner" /> */}
       <div className="main-container">
         <div className="sub-container">
           <Profile student={currentStudent} />
