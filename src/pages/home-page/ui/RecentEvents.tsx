@@ -17,6 +17,12 @@ interface RecentEventsProps {
 }
 
 function RecentEvents({ events }: RecentEventsProps) {
+
+    function handleEventClick(event: Event) {
+        // For now, let's just log the event title. In a real app, we might navigate to an event detail page.
+        console.log(`Event clicked: ${event.title}`);
+    }
+
     return (
         <div className="recent-events-container">
             <h2 className="section-title">Recent Events</h2>
@@ -25,9 +31,9 @@ function RecentEvents({ events }: RecentEventsProps) {
                     <div className="event-card" key={index}>
                         <div className="event-header">
                             <div className="event-date">{event.date}</div>
-                            <h3>{event.title}</h3>
+                            <h3 onClick={() => handleEventClick(event)}>{event.title}</h3>
                         </div>
-                        <div className="desc">{event.description}</div>
+                        <div className="desc">{event.description}</div> http://localhost:5173/
                     </div>
                 ))}
             </div>

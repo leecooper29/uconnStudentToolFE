@@ -21,6 +21,8 @@ this should be specific to uconn students
   display: flex;
   align-items: center;
   padding: 0.5rem;
+  background-color: white;
+  margin: 1rem;
 }
 
 .sub-item {
@@ -30,9 +32,9 @@ this should be specific to uconn students
 }
 
 .sub-grid-item.left {
-  flex-direction: row;
+  display: flex;
   gap: 1rem;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 .student-image {
@@ -65,16 +67,8 @@ h5 {
 /* //////// */
 
 .space-between {
-  display: flex;
   flex-direction: column;
 }
-
-.sub-grid-item {
-  display: flex;
-  background-color: lightgray;
-  margin: 1rem;
-}
-
 .column {
   display: flex;
   flex-direction: column;
@@ -93,7 +87,6 @@ h5 {
 .student-profile-section .main-container {
   flex: 1;
 }
-
 
 /* Layout Constraints */
 .student-profile-section .main-container {
@@ -373,7 +366,6 @@ h5 {
 @media (max-width: 600px) {
   .profile-header {
     flex-direction: column;
-    text-align: center;
     padding: 1.5rem;
   }
 

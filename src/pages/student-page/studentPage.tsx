@@ -1,13 +1,16 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import "./studentPage.css";
+import StudentProfile from "./ui/studentProfile";
 
 function StudentPage() {
+
     return (
         <>
             <div className="student-page-container">
                 <div style={{ padding: "2rem" }}>
-                    <h1>Welcome to Student Page</h1>
-                    <p>Student Page Works</p>
-                    <Link to="/network">Back to Network</Link>
+                    <h2>Welcome to Student Page</h2>
+                    <StudentProfile/>
+                    {/* <Link to="/network">Back to Network</Link> */}
                 </div>
             </div>
         </>

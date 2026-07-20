@@ -10,11 +10,9 @@ import Tutoring from "./pages/tutoring/tutoring";
 import { AuthProvider } from "./shared/ui/layout/main-nav/contexts/AuthContext";
 
 function App() {
-
   // boot.dev for all things back end
   //  your front end is not bad
   //  you just need to understand ui/ux fundamentals
-
   return (
     <AuthProvider>
       <BrowserRouter>

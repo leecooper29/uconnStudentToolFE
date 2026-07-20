@@ -14,6 +14,12 @@ function Footer() {
     { name: "Terms of Service", url: "/https://stamford.uconn.edu/academics/undergraduate/" },
   ];
 
+  const footerList = footerLinks.map((link) => (
+    <a key={link.name} href={link.url} className="f-link">
+      {link.name}
+    </a>
+  ));
+
   return (
     <footer>
       <div className="sub-footer-container">
@@ -34,7 +40,6 @@ function Footer() {
           </div>
           {/* <p className="icons">social media icons</p> */}
           <div className="footer-container">
-            <div className="footer-container">
               <div className="footer-links">
                 {footerLinks.map((link) => (
                   <a key={link.name} href={link.url} className="f-link">
@@ -42,13 +47,13 @@ function Footer() {
                   </a>
                 ))}
               </div>
-            </div>
           </div>
         </div>
         <div className="footer-separator" />
         <div className="footer-address">
           <div>
             <h4>UCONN</h4>
+            <div className="direct"></div>
           </div>
           <div>
             <p>stamford campus</p>

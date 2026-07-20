@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./mainnav.css";
 import { useEffect, useRef, useState, useContext } from "react";
-import { AuthContext } from "./contexts/AuthContext";
 import { TiArrowSortedDown } from "react-icons/ti";
 
 function MainNav() {
@@ -12,7 +11,6 @@ function MainNav() {
   const campusDropDownRef = useRef<HTMLLIElement | null>(null);
   const tutoringDropDownRef = useRef<HTMLLIElement | null>(null);
   const navigate = useNavigate();
-  const auth = useContext(AuthContext);
 
   const handleCampusClick = (campus: string) => {
     setSelectedCampus(campus);

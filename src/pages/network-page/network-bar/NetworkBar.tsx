@@ -1,11 +1,12 @@
-import { useState } from "react";
-
 import "./networkbar.css";
 function networkBar() {
-
-  // const [searchTerm, setSearchTerm] = useState(""); 
-  // const networkItems = ["Chose Major", "Select Year", "Some text"];
   
+  const handleSearch = () => {
+    // Implement search logic here, e.g., filter network items based on searchTerm
+    // searches list of users from backend and displays them in the network page. 
+    console.log("Search button clicked!");
+  }
+
   return (
     <>
       <div>
@@ -14,16 +15,16 @@ function networkBar() {
           alert('Submitting!'); 
           }}>
         <div className="network-bar">
+          <div className="between">
           <p className="network">My Network</p>
-          <div className="network-bar-header">
+          <div>
             <input
               type="text"
               placeholder="student..."
               className="network-searchbar"
             />
+              <button className="s-btn" onClick={handleSearch}>search</button>
           </div>
-          <div>
-            <button className="s-btn">search</button>
           </div>
         </div>
         </form>

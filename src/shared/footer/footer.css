@@ -80,15 +80,6 @@ h4 {
   padding: 1rem;
 }
 
-.footer-separator {
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  height: 1px;
-  background-color: grey;
-  margin: 1rem 0;
-}
-
 .footer-address {
   display: flex;
   justify-content: center;

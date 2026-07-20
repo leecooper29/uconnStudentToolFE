@@ -1,5 +1,5 @@
-import NetworkBar from "../../network-page/network-bar/NetworkBar";
-import StudentCard, { Student } from "./studentCard";
+import NetworkBar from "../network-bar/NetworkBar";
+import StudentCard, { Student } from "../../student-page/ui/studentCard";
 import "./studentServices.css";
 
 interface StudentServicesProps {

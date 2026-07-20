@@ -47,7 +47,7 @@ function StudentCard({ student }: StudentCardProps) {
           {/* links to the student profile of the selected person
               that you want to make a connection with. */}
           <button className="connect-button" onClick={handleConnect}>
-            Add Connection
+            Connect
           </button>
         </div>
       </div>

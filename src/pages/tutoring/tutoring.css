@@ -99,6 +99,22 @@ h1 {
   color: white;
 }
 
+@media (max-width: 402px) {
+  .main-nav {
+    flex-direction: column;
+   font-size: 12px; 
+  }
+  .student-info {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .tutoring-services {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 
 @media (max-width: 800px) {
   .tutoring-services {
     grid-template-columns: 1fr;
@@ -113,11 +129,13 @@ h1 {
   .tutoring-service-card {
     padding: 1rem;
   }
-}
+} */
 
 .student-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   padding: 1rem;
+  background-color: lightgray;
+
 }

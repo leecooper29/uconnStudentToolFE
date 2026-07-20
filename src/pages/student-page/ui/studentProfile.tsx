@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import NetworkBar from "../../network-page/network-bar/NetworkBar";
 import { Student } from "./studentCard";
-import "./studentServices.css";
+// import "./studentServices.css";
 
 function StudentProfile() {
     const location = useLocation();

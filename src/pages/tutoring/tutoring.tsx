@@ -43,12 +43,17 @@ const servicesList: ServiceData[] = [
   
 ];
 
+// const currentSchedule: ServiceData[] = [] [
+//   {
+//     monday: 'class',
+//     time: 220
+//   }
+// ]
+
 function Tutoring() {
   const location = useLocation();
   const selectedService = (location.state as { service?: string } | null)?.service;
   const [activeService, setActiveService] = useState<string | null>(selectedService || null);
-
-
 
   useEffect(() => {
     if (selectedService) {
@@ -62,19 +67,19 @@ function Tutoring() {
     console.log(`Scheduling ${serviceTitle}...`);
   };
 
-  const user = "Lee Cooper"
-
   return (
     <div className="tutoring-container">
-            {/* Tutoring services grid */}
+        {/* Tutoring services grid */}
       <div className='student-info'>
         <div className="">
           <h1>Welcome to Case!</h1>
           <p>Your one-stop solution for all tutoring needs.</p>
           <p>Register here! (kiosk in person) list of items</p>
+          {/* schedule */}
+          <div className=""></div>
        </div>
        {/* <div className="hide-student">
-        <h2>{user}</h2>
+        <h2>{user}</Wh2>
         <p>Progress: 3/5 services completed</p>
         <div className="student-id">Student ID: 12345</div>
         <div className="schedule"></div>

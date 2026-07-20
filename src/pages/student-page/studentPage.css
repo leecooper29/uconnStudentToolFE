@@ -1,7 +1,20 @@
+h2 {
+    padding: 0;
+    margin-bottom: 1rem;
+}
 .student-page-container {
+    background-color: lightgray;
+    margin-bottom: 1rem;
+}
+.student-container {
+    display: flex;
+    background-color: lightgray;
+}
+.student-profile {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: lightgray;
-    padding: 1rem;
+}
+.student-profile > p {
+    padding: 0 !important;
+    margin: 0; 
 }
