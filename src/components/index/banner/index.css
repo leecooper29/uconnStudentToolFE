@@ -1,0 +1,24 @@
+/* image or linear gradient*/
+.banner {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  color: white;
+  padding: 0;
+  font-weight: bold;
+  background-color: #d3d3d3;
+  margin-top: 2rem;
+  overflow: hidden;
+  /* background: #020024; */
+  /* background: linear-gradient(0deg, rgba(2, 0, 36, 1) 10%, rgba(9, 8, 116, 1) 30%, rgba(96, 96, 196, 1) 83%); */
+  /* background: #020024; */
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.4;
+}

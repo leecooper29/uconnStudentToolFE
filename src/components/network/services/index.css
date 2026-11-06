@@ -1,0 +1,104 @@
+/* try to be careful with the styling on each page
+to make it as accurate as possible (similar styling to the uconn site)
+this should be specific to uconn students
+*/
+.sub-container {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  justify-content: center;
+  background-color: white;
+  margin: 0;
+}
+
+.sub-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: lightgray;
+  padding: 1rem;
+}
+
+.sub-grid-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: white;
+  margin: 1rem;
+}
+
+.sub-item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.sub-grid-item.left {
+  display: flex;
+  gap: 1rem;
+  /* background-color: #fff; */
+}
+
+.student-image {
+  width: auto;
+  width: 125px;
+  background-color: orange;
+}
+
+.student-contents {
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: 1rem; */
+}
+
+h5 {
+  font-size: 20px;
+  margin: 0;
+}
+
+
+.space-between {
+  flex-direction: column;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 900px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-header {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .header-info {
+    align-items: center;
+  }
+
+  .action-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .academics-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

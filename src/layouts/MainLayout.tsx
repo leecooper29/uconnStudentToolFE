@@ -1,6 +1,6 @@
 // src/layouts/MainLayout.tsx
-import Header from "../shared/header";
-import Footer from "../shared/footer/footer";
+import Header from "../components/header/header";
+import Footer from "../components/footer/footer";
 import { Outlet } from "react-router-dom";
 
 function MainLayout() {

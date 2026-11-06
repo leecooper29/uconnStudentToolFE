@@ -1,0 +1,88 @@
+/* Profile Component Styles */
+h1 {
+  font-size: 20px;
+  margin: 0 !important;
+  font-family: sans-serif;
+  padding: 0 !important;
+  color: black !important;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  padding: 1rem;
+}
+
+.student-location p {
+  margin: 0;
+  align-items: left;
+}
+
+.profile-image {
+  background-color: orange;
+  width: 180px;
+}
+
+.main-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-item ul li {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.main-item li {
+  list-style: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.sub-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+}
+
+.student-description {
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+.student-details {
+  list-style: none;
+  background-color: white;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.student-details ul {
+  padding: 0;
+  list-style: none;
+}
+
+.student-details ul li {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 0.5rem;
+}
+
+.messages-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  background-color: white;
+  padding: 1rem;
+}

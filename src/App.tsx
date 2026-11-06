@@ -1,19 +1,41 @@
+import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import AuthLayout from "./layouts/AuthLayout";
-import HomePage from "./pages/home-page/homePage";
-import NetworkPage from "./pages/network-page/networkPage";
-import StudentPage from "./pages/student-page/studentPage";
-import ProfilePage from "./pages/tutoring/tutoring";
-import SignIn from "./pages/user/signin";
-import Tutoring from "./pages/tutoring/tutoring";
-import { AuthProvider } from "./shared/ui/layout/main-nav/contexts/AuthContext";
-
+import HomePage from "./components/index";
+import NetworkPage from "./components/network";
+import StudentPage from "./components/student/index";
+import ProfilePage from "./components/tutoring";
+import SignIn from "./components/sign";
+import Tutoring from "./components/tutoring";
+import { AuthProvider } from "./contexts/AuthContext";
+// import SearchResults from "./mock-data/searchResults";
+/*
+postgresql 
+userid:postgres
+password
+admin123*/
 function App() {
-  // boot.dev for all things back end
-  //  your front end is not bad
-  //  you just need to understand ui/ux fundamentals
-  return (
+    const [message, setMessage] = useState();
+  // const [error, setError] = useState(null);
+
+   useEffect(() => {
+        // Requesting data from the FastAPI server port
+    fetch('http://localhost:8000/api/data')
+      .then((res) => res.json())
+      .then((data) => setMessage(data.message))
+      .catch((err) => console.error(err));
+      // if (!query.trim(){
+      //   SearchResults([]);
+      //   return;
+      // })
+  }, []);
+
+
+  const api_base_url = ' http://localhost:8000/api/v1/';
+  console.log('api base url',api_base_url);
+  return(
+
     <AuthProvider>
       <BrowserRouter>
         <Routes>
@@ -36,6 +58,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </AuthProvider>
+
   );
 }
 

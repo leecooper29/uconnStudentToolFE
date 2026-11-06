@@ -1,0 +1,67 @@
+h1 {
+  font-size: 30px;
+  font-family: sans-serif;
+  padding: 0;
+}
+
+/* information grid, info about the website what it was created to solve */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  gap: 20px;
+}
+
+.start {
+  padding: 0.5rem;  
+  background-color: rgb(4, 4, 48);
+  color: white;
+}
+
+.sqr {
+  background-color: white;
+  height: 200px;
+}
+
+.item {
+  background-color: lightgray;
+  padding: 1rem;
+}
+
+.item-2 {
+  background-color: lightgray;
+  padding: 1rem;
+}
+
+.events-item {
+
+  background-color: lightgrey;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+/* .event-item:hover {
+  border-bottom: 1px solid black;
+} */
+
+@media screen and (min-width: 402px) {
+.section-title{
+  display: none;
+}
+
+.events-grid {}
+
+.event-card {
+  display: block;
+}
+
+}
+
+
+/* default phone view breakpoint  */
+@media screen and (max-width: 375px) {
+  .title {
+    font-size: 12px;
+  }
+}
